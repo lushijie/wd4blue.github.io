@@ -1,4 +1,4 @@
-define([], function(){
+define(['jquery'], function($){
 
 	var Tips = (function(){
 
@@ -94,7 +94,6 @@ define([], function(){
 			resetTags();
 			bind();
 			Tips.init();
-			//
 		}
 	}
 });
