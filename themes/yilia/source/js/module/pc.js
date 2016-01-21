@@ -90,7 +90,6 @@ define(['jquery'], function($){
 
 	return {
 		initPC: function(){
-			console.log("initPC");
 			resetTags();
 			bind();
 			Tips.init();

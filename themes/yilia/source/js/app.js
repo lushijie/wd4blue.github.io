@@ -1,20 +1,27 @@
 require.config({
 	paths: {
-		"jquery": "http://cdn.bootcss.com/jquery/1.11.3/jquery"
+		"jquery": "http://cdn.bootcss.com/jquery/1.11.3/jquery",
+		"mobile": "/js/module/mobile",
+		"pc": "/js/module/pc",
+		"rt": "/js/module/rt"
 	}
 });
-require(['jquery','/js/module/mobile.js','/js/module/pc.js'], function ($,mobile,pc){
-	console.log("main.js运行开始");
+require(['jquery','mobile','pc'], function ($,mobile,pc){
+	console.log('引入的mobile对象',mobile);
+	console.log('引入的PC对象',pc);
+	require(['rt'], function(rt){
+		console.log('引入的RT对象',rt);
+	});
 	var isMobileInit = false;
 	var loadMobile = function(){
-		//require(['/js/mobile.js'], function(mobile){
+		//require(['mobile'], function(mobile){
 			mobile.initMobile();
 			isMobileInit = true;
 		//});
 	}
 	var isPCInit = false;
 	var loadPC = function(){
-		//require(['/js/pc.js'], function(pc){
+		//require(['pc'], function(pc){
 			pc.initPC();
 			isPCInit = true;
 		//});
@@ -39,9 +46,6 @@ require(['jquery','/js/module/mobile.js','/js/module/pc.js'], function ($,mobile
 	    }()
 	}
 
-	require(['/js/module/rt.js'], function(rt){
-		console.log('rt',rt);
-	});
 	// $(window).bind("resize", function(){
 	// 	if(isMobileInit && isPCInit){
 	// 		$(window).unbind("resize");
@@ -86,7 +90,6 @@ require(['jquery','/js/module/mobile.js','/js/module/pc.js'], function ($,mobile
 	// 			$(".js-avatar").addClass("show");
 	// 		}
 	// 	});
-		
 	// 	if(yiliaConfig.isHome === true){
 	// 		//content
 	// 		function showArticle(){
