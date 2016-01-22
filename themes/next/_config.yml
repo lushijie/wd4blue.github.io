@@ -212,8 +212,8 @@ facebook_sdk:
 # You can visit https://leancloud.cn get AppID and AppKey.
 leancloud_visitors:
   enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  app_id: 4GJRhTFmCOnFvIQzF0Re1yeK-gzGzoHsz
+  app_key: zV3iwvDCPfY8voyyB03cqoXc
 
 
 # Tencent analytics ID
@@ -230,7 +230,7 @@ leancloud_visitors:
 #! ---------------------------------------------------------------
 
 # Motion
-use_motion: true
+use_motion: false
 
 # Fancybox
 fancybox: true
