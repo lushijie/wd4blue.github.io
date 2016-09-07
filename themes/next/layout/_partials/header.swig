@@ -45,7 +45,7 @@
 
       {# Search icon for default scheme #}
       {% set use_search_icon = theme.scheme === 'Muse' or theme.scheme === 'Pisces' %}
-      {% if use_search_icon and theme.swiftype_key %}
+{#       {% if use_search_icon and theme.swiftype_key %}
         <li class="menu-item menu-item-search">
           <a href="#" class="st-search-show-outputs">
             {% if theme.menu_icons.enable %}
@@ -54,7 +54,7 @@
             {{ __('menu.search') }}
           </a>
         </li>
-      {% endif %}
+      {% endif %} #}
     </ul>
   {% endif %}
 
